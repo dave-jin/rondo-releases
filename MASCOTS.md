@@ -107,8 +107,20 @@ npx electron scripts/mascot-compose  src/<팩>/char.json  <출력폴더>
 
 ## 4. 넣기
 
-만든 폴더를 Rondo 의 마스코트 폴더에 넣고 **설정 → 일반 → 마스코트**에서 고릅니다.
-(현재 버전은 내장 팩만 목록에 뜹니다 — 사용자 폴더 팩 로딩은 다음 업데이트입니다.)
+**설정 → 일반 → 마스코트 → [마스코트 폴더 열기]** 를 누르면 폴더가 열립니다.
+거기에 팩 폴더를 통째로 넣고 **설정을 다시 열면** 목록에 나타납니다.
+
+```
+~/Library/Application Support/rondo/mascots/
+  my-cat/
+    idle.png  blink.png  …  alert.png
+    front.png front-blink.png
+    mascot.json          ← 선택. {"name": {"ko": "우리 고양이"}} 만 있어도 됩니다
+```
+
+- `idle.png` 가 없는 폴더는 **목록에 안 뜹니다**(빈 마스코트를 조용히 그리느니 빼는 편이 낫습니다).
+- 상한: 팩 20개 · 팩당 컷 40개 · 파일 512KB.
+- 이름을 안 주면 **폴더 이름**이 그대로 표시됩니다.
 
 ## 5. 라이선스
 
